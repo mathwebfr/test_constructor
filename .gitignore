@@ -1,0 +1,37 @@
+# === Fichiers Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# === Fichiers LaTeX temporaires ===
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+*.xdv
+
+# === Fichiers PDF générés ===
+*.pdf
+
+# === Fichiers de sauvegarde ou temporaires ===
+*~
+*.bak
+*.tmp
+.DS_Store
+
+# === Environnement ou config local ===
+.env
+.venv/
+.idea/
+.vscode/
