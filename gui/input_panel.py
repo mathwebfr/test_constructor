@@ -241,7 +241,7 @@ class InputPanel:
         label.pack(anchor="w")
     
         styles = self.get_styles("consignestyles")
-        if self.params["consigne_style"]:
+        if "consigne_style" in self.params and self.params["consigne_style"]:
             self.consigne_style_var = tk.StringVar(value=self.params["consigne_style"])
         else:
             self.consigne_style_var = tk.StringVar(value="")
