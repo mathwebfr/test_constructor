@@ -69,6 +69,10 @@ test-constructor/
 
 Vous pouvez ajouter les styles que vous voulez (il suffit d'utiliser la même syntaxe LaTeX que les autres fichiers). Et je serai ravi de les ajouter au projet!
 
+## 📷 Capture d’écran
+
+![Aperçu](screenshot.png)
+
 ## 📦 Installation des dépendances
 
 Ce projet n’utilise que la bibliothèque standard de Python.  
