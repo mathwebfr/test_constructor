@@ -1,0 +1,12 @@
+\makeatletter
+\def\@maketitle{%
+  \noindent\fbox{%
+  	\begin{minipage}{\dimexpr\linewidth-1ex}
+  		\begin{center}%
+    	{\fontfamily{lmss}\bfseries\selectfont\LARGE \@title \par}%
+    	\vskip .5em%
+    	{\large \fontfamily{lmss}\selectfont\@author{} -- \@date}
+  		\end{center}%
+    \end{minipage}}%
+}
+\makeatother

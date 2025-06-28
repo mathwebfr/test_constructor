@@ -1,0 +1,18 @@
+\makeatletter
+\def\@maketitle{%
+  \noindent%
+  \begin{tabular}{@{}|p{0.47\textwidth}|@{}p{0.02\textwidth}@{}|p{0.47\textwidth}|@{}}
+  	\cline{1-1} \cline{3-3}
+  	\fontfamily{lmss}\bfseries\selectfont\LARGE \@title\strut
+  	&
+  	&
+  	\fontfamily{lmss}\bfseries\selectfont Nom, prénom:
+  	\\
+  	\large \fontfamily{lmss}\selectfont\@author{} -- \@date\strut
+  	&
+  	&
+  	\\
+  	\cline{1-1} \cline{3-3}
+	\end{tabular}
+}
+\makeatother

@@ -1,0 +1,50 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbset{titre/.style={
+	enhanced,
+	hbox,
+	tikznode,
+	left=0mm,
+	right=0mm,
+	boxrule=0.4pt,
+  	colframe=gray,
+  	drop lifted shadow=black!50!gray,
+  	after=\par\bigskip,
+  	interior style={
+		draw=gray!25,
+		top color=gray!10,
+		bottom color=white}
+	},	
+	info/.style = { 
+	colframe = white,
+	colback=gray!10}
+}
+
+\makeatletter
+\def\@maketitle{%
+  \noindent%
+  \begin{tabular}{@{}p{0.47\textwidth}@{}p{0.02\textwidth}@{}p{0.47\textwidth}@{}}
+  	\begin{tcolorbox}[titre]
+  	\begin{minipage}{0.95\linewidth}
+  		\begin{center}%
+    	{\fontfamily{lmss}\bfseries\selectfont\LARGE \@title \par}%
+    	\vskip .5em%
+    	{\large
+      	\lineskip .5em%
+        \fontfamily{lmss}\selectfont\@author{} --- \@date}
+  		\end{center}%
+  		\par
+    \end{minipage}
+    \end{tcolorbox}
+  	&
+  	&
+  	\begin{tcolorbox}[titre]
+  	\begin{minipage}{\linewidth}
+        \fontfamily{lmss}\selectfont\bfseries Nom, prénom:
+  		\par
+ 		\vspace*{2em}
+    \end{minipage}
+    \end{tcolorbox}
+	\end{tabular}
+}
+\makeatother

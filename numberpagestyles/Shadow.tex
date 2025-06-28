@@ -1,0 +1,35 @@
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+\tcbset{pagenumber/.style={
+	enhanced,
+	hbox,
+	tikznode,
+	left=0mm,
+	right=0mm,
+	boxrule=0.4pt,
+  	colframe=gray,
+  	before=\vspace*{-2em},
+  	%drop lifted shadow=black!50!gray,
+  	drop shadow={
+      xshift=1mm,
+      yshift=-1mm,
+      scale=0.6,
+      opacity=0.5,
+      color=black!50!gray
+    },
+  	interior style={
+		draw=gray!25,
+		top color=gray!10,
+		bottom color=white}
+	},	
+	info/.style = { 
+	colframe = white,
+	colback=gray!10}
+}
+
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyfoot[C]{\begin{tcolorbox}[pagenumber] ~~\thepage{}~~ \end{tcolorbox}}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\pagestyle{fancy}

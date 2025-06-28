@@ -1,0 +1,24 @@
+\usepackage{tcolorbox}
+	\tcbuselibrary{skins}
+\usepackage{varwidth}
+
+\newtcolorbox{consigne}[2][]{
+	enhanced,%
+	skin = enhancedlast jigsaw,
+	attach boxed title to top left = {xshift=-4mm,yshift=-0.5mm},
+	fonttitle = \bfseries\sffamily,
+	varwidth boxed title = 0.7\linewidth,
+	colbacktitle = gray!40,
+	colframe = black,
+	interior style={top color=gray!30,bottom color=gray!10},
+	boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+	underlay boxed title={
+	\fill[gray] (title.north west) -- (title.north east)
+-- +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm)
+-- ([xshift=4mm,yshift=0.5mm]frame.north east) -- +(0mm,-1mm)
+-- (title.south west) -- cycle;
+\fill[gray!50!black] ([yshift=-0.5mm]frame.north west)
+-- +(-0.4,0) -- +(0,-0.3) -- cycle;
+\fill[gray!50!black] ([yshift=-0.5mm]frame.north east)
+-- +(0,-0.3) -- +(0.4,0) -- cycle; },
+title={#2},#1}
